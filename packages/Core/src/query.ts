@@ -1600,7 +1600,7 @@ export class _nanoSQLQuery implements InanoSQLQueryExec {
                     result[arg.as || arg.value] = deepGet(arg.value, row);
                 }
             });
-            return this.query.join ? this._combineRows(result) : result;
+            return result;
         }
         return this.query.join ? this._combineRows(row) : row;
     }
